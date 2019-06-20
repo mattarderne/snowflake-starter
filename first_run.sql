@@ -2,7 +2,7 @@
 USE ROLE ACCOUNTADMIN;
 
 -- I don't think I did this...may not be needed? dbt takes care of that via the quoting: argument in dbt_project.yml
-ALTER ACCOUNT SET QUOTED_IDENTIFIERS_IGNORE_CASE = TRUE;
+-- ALTER ACCOUNT SET QUOTED_IDENTIFIERS_IGNORE_CASE = TRUE;
 
 -- (1) CREATE DATABASES
 USE ROLE SYSADMIN;
