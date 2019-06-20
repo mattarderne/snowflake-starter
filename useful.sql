@@ -11,4 +11,7 @@ GRANT SELECT ON FUTURE VIEWS IN SCHEMA "RAW"."<SCHEMA_NAME>" TO ROLE transformer
 on-run-end:                     # grants permissions on all newly created tables
      - 'grant usage on schema {{ target.schema }} to reporting'
      - 'grant select on all tables in schema {{ target.schema }} to reporting'
+     - 'grant select on all views in schema {{ target.schema }} to reporting'
+     - 'grant select on future tables in schema {{ target.schema }} to reporting'
+     - 'grant select on future views in schema {{ target.schema }} to reporting'
 */
