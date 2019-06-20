@@ -1,7 +1,10 @@
 -- for each schema in database RAW,
 -- give the transformer select access to all tables, e.g.:
-GRANT SELECT ON ALL TABLES IN SCHEMA "RAW"."<SCHEMA_NAME>" TO DBT_ROLE;
+GRANT SELECT ON ALL TABLES IN SCHEMA "RAW"."<SCHEMA_NAME>" TO ROLE transformer;
+GRANT SELECT ON ALL VIEWS IN SCHEMA "RAW"."<SCHEMA_NAME>" TO ROLE transformer;
+GRANT SELECT ON FUTURE TABLES IN SCHEMA "RAW"."<SCHEMA_NAME>" TO ROLE transformer;
 GRANT SELECT ON FUTURE VIEWS IN SCHEMA "RAW"."<SCHEMA_NAME>" TO ROLE transformer;
+
 -- this may have to be repeated periodically
 
 
