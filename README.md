@@ -34,11 +34,14 @@ Permissions are structured as follows
 
 ## Test
 
-The [first_run_permissions_test.sql.sql](/first_run_permissions_test.sql.sql) file will:
+The [first_run_permissions_test.sql](/first_run_permissions_test.sql) file will:
 1. create a base table in the `RAW` database, load a test row using the `ROLE_INGEST` role
 1. create a new table and view in `ANALYTICS` using the `ROLE_TRANSFORM` role
 1. query that view using the `ROLE_REPORT` role
 
+## Tear Down
+
+The [first_run_drop.sql](/first_run_drop.sql) file will drop all objects created by [first_run.sql](/first_run.sql) 
 
 
 # Sources
