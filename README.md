@@ -11,20 +11,20 @@ Snowflake offers a 1 month free trial, and with this repo you should be able to 
 
 ```
 ├── DATABASES
-│   ├── RAW            # This is the landing pad for everything extracted and loaded
-│   └── ANALYTICS      # This database contains tables and views accessible to analysts and reporting
+│   ├── RAW                     # This is the landing pad for everything extracted and loaded
+│   └── ANALYTICS               # This database contains tables and views accessible to analysts and reporting
 ├── WAREHOUSES
-│   ├── LOADING        # Tools like Stitch will use this warehouse to perform loads of new data
-│   ├── TRANSFORMING   # This is the warehouse that dataform/dbt will use to perform all data transformations
-│   ├── REPORTING      # BI tools will connect to this warehouse to run analytical queries
+│   ├── WAREHOUSE_INGEST        # Tools like Stitch will use this warehouse to perform loads of new data
+│   ├── WAREHOUSE_TRANSFORM     # This is the warehouse that dataform/dbt will use to perform all data transformations
+│   ├── WAREHOUSE_REPORT        # BI tools will connect to this warehouse to run analytical queries
 ├── ROLES
-│   ├── LOADER        # Give this role to your Extract/Load tools/scripts to load data
-│   ├── TRANSFORMER   # Give this role to Dataform/dbt to transform data, and Data Engineers
-│   ├── REPORTER      # Give this role to BI tools / Analysts to query analytics data
+│   ├── ROLE_INGEST             # Give this role to your Extract/Load tools/scripts to load data
+│   ├── ROLE_TRANSFORM          # Give this role to Dataform/dbt to transform data, and Data Engineers
+│   ├── ROLE_REPORT             # Give this role to BI tools / Analysts to query analytics data
 ├── USERS
-│   ├── TEST_LOADER        
-│   ├── TEST_TRANSFORMER   
-│   ├── TEST_REPORTER      
+│   ├── USER_INGEST             # eg: Stitch User
+│   ├── USER_TRANSFORM          # eg: Dataform User
+│   ├── USER_REPORT             # eg: Looker user
 
 ```
 
@@ -35,9 +35,9 @@ Permissions are structured as follows
 ## Test
 
 The [first_run_permissions_test.sql.sql](/first_run_permissions_test.sql.sql) file will:
-1. create a base table in the `RAW` database, load a test row using the `LOADER` role
-1. create a new table and view in `ANALYTICS` using the `TRANSFORMER` role
-1. query that view using the `REPORTER` role
+1. create a base table in the `RAW` database, load a test row using the `ROLE_INGEST` role
+1. create a new table and view in `ANALYTICS` using the `ROLE_TRANSFORM` role
+1. query that view using the `ROLE_REPORT` role
 
 
 
