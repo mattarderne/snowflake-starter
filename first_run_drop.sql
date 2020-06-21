@@ -1,5 +1,10 @@
 -- this file cleans up all objects created in first_run.sql
 
+----------------------------------------
+-- DROP ALL OBJECTS
+----------------------------------------
+
+USE ROLE SYSADMIN;
 DROP DATABASE "RAW";
 DROP DATABASE "ANALYTICS";
 DROP WAREHOUSE "LOADING";
