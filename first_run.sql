@@ -21,7 +21,6 @@ WAREHOUSE_TYPE = 'STANDARD'
 AUTO_SUSPEND = 60
 AUTO_RESUME = TRUE
 MIN_CLUSTER_COUNT = 1 MAX_CLUSTER_COUNT = 1
-//SCALING_POLICY = 'STANDARD'
 ;
 -- Tools like Fivetran and Stitch will use this warehouse to perform their regular loads of new data. 
 -- We separate this workload from the other workloads because, at scale, loading can put significant strain on your warehouse and we don’t want to cause slowness for your BI users.
@@ -33,7 +32,6 @@ WAREHOUSE_TYPE = 'STANDARD'
 AUTO_SUSPEND = 60
 AUTO_RESUME = TRUE
 MIN_CLUSTER_COUNT = 1 MAX_CLUSTER_COUNT = 1
-//SCALING_POLICY = 'STANDARD'
 ;
 -- This is the warehouse that dataform/dbt will use to perform all data transformations. 
 -- It will only be in use (and charging you credits) when regular jobs are being run.
@@ -44,7 +42,6 @@ WAREHOUSE_TYPE = 'STANDARD'
 AUTO_SUSPEND = 60
 AUTO_RESUME = TRUE
 MIN_CLUSTER_COUNT = 1 MAX_CLUSTER_COUNT = 1
-//SCALING_POLICY = 'STANDARD'
 ;
 -- BI tools will connect to this warehouse to run analytical queries and report the results to end users. 
 -- This warehouse will be spun up only when a user is actively running a query against it.
