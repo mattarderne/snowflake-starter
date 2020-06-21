@@ -30,7 +30,7 @@ Snowflake offers a 1 month free trial, and with this repo you should be able to 
 
 Permissions are structured as follows
 
-![permissions.png](/permissions.png)
+![snowflake.png](/snowflake.png)
 
 ## Test
 
