@@ -1,7 +1,9 @@
-# snowflake_init
+# snowflake-starter
 A starter template for [Snowflake Cloud Database](www.snowflake.com)
 
-This temaplate will create the necessary `ROLE`, `USER`, `DATABASE`, `SCHEMA` & `WAREHOUSE`(s) necessary to get up and running with Snowflake.
+This temaplate will create the necessary `ROLE`, `USER`, `DATABASE`, `SCHEMA` & `WAREHOUSE`(s) necessary to get up and running with Snowflake:
+
+![snowflake.png](/snowflake.png)
 
 Snowflake offers a 1 month free trial, and with this repo you should be able to get a sense for the basics within an hour.
 
@@ -28,9 +30,7 @@ Snowflake offers a 1 month free trial, and with this repo you should be able to 
 
 ```
 
-Permissions are structured as follows
 
-![snowflake.png](/snowflake.png)
 
 ## Test
 
