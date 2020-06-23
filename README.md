@@ -5,7 +5,7 @@ This temaplate will create the necessary `ROLE`, `USER`, `DATABASE`, `SCHEMA` & 
 
 ![snowflake.png](/snowflake.png)
 
-Snowflake offers a 1 month free trial, and with this repo you should be able to get a sense for the basics within an hour.
+Snowflake offers a 1 month free trial, and with this repo you should be able to get a sense for the basics of Snowflake within an hour.
 
 ## Usage
 
@@ -44,7 +44,9 @@ The [first_run_permissions_test.sql](/first_run_permissions_test.sql) file will:
 The [first_run_drop.sql](/first_run_drop.sql) file will drop all objects created by [first_run.sql](/first_run.sql) 
 
 
-# Sources
-Taking inspiration from [Calogica.com](https://Calogica.com) and following the advice of [Fishtown Analytics](https://blog.fishtownanalytics.com/how-we-configure-snowflake-fc13f1eb36c4), this SQL statement will configure your Snowflake instance with a nicely configured and scalable platform for further development.
+# Why
+
+* Taking inspiration from [Calogica.com](https://Calogica.com) and following the advice of [Fishtown Analytics](https://blog.fishtownanalytics.com/how-we-configure-snowflake-fc13f1eb36c4), this helps you configure your Snowflake instance with a nicely configured and scalable platform for a POC or even a scalable base.
+* Read my writing on the topic of Data Systems at [groupby1](groupby1.substack.com/)
 
 
