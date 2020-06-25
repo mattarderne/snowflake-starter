@@ -23,7 +23,7 @@ Or use the CLI
 snowsql -c <your_connection_name> -f first_run.sql
 ```
 
-![snowflake.png](/assets/worksheet.png | width=200 )
+![snowflake.png](/assets/worksheet.png)
 
 ### Infrastructure Details
 The following is created, as described in [first_run.sql](/first_run.sql)
@@ -48,23 +48,24 @@ The following is created, as described in [first_run.sql](/first_run.sql)
 
 ## 2. Test
 
-The [first_run_permissions_test.sql](/first_run_permissions_test.sql) file will:
+Use the [first_run_permissions_test.sql](/first_run_permissions_test.sql) SQL to:
 1. create a base table in the `RAW` database, load a test row using the `ROLE_INGEST` role
 1. create a new table and view in `ANALYTICS` using the `ROLE_TRANSFORM` role
 1. query that view using the `ROLE_REPORT` role
 
-Or use the CLI
+**NB replace `<USERNAME>` in the file with your login name** 
+
+Or use the CLI:
 ```bash
 snowsql -c <your_connection_name> -f first_run_permissions_test.sql
 ```
 
-**NB replace `<USERNAME>` in the file with your login name** 
 
 ## 3. JSON
 
 JSON is very well handled in Snowflake, and worth a look. The [json_example.sql](/json_example.sql) file runs through the flattening of raw JSON into a table.
 
-Or use the CLI
+Or use the CLI:
 ```bash
 snowsql -c <your_connection_name> -f json_example.sql
 ```
@@ -75,7 +76,7 @@ snowsql -c <your_connection_name> -f json_example.sql
 
 The [first_run_drop.sql](/first_run_drop.sql) file will drop all objects created by [first_run.sql](/first_run.sql) 
 
-Or use the CLI
+Or use the CLI:
 ```bash
 snowsql -c <your_connection_name> -f first_run_drop.sql
 ```
