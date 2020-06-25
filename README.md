@@ -78,6 +78,12 @@ snowsql -c <your_connection_name> -f json_example.sql -o friendly=false -o quiet
 snowsql -c <your_connection_name> -f first_run_drop.sql -o friendly=false -o quiet=true
 ```
 
+## Snowflake Inspector
+
+If you'd like to keep track of the evolution of your Snowflake Data Warehouse, [snowflakeinspector](http://snowflakeinspector.hashmapinc.com/) is a great tool to do just that. Query your metadata and paste the results into their tool and you'll get a nice explorable visualisation as below:
+
+![snowflakeinspector.png](/assets/snowflakeinspector.png)
+
 # More
 
 * Thanks for the inspiration [Calogica.com](https://Calogica.com) and [Fishtown Analytics](https://blog.fishtownanalytics.com/how-we-configure-snowflake-fc13f1eb36c4). JSON tutorial [here](https://interworks.com/blog/hcalder/2018/06/19/the-ease-of-working-with-json-in-snowflake/)
@@ -87,6 +93,6 @@ snowsql -c <your_connection_name> -f first_run_drop.sql -o friendly=false -o qui
 # TODO
 * [x] think about adding [Snowsql CLI](https://docs.snowflake.com/en/user-guide/snowsql-install-config.html)
 * [ ] think about permissions management with [permifrost](https://gitlab.com/gitlab-data/permifrost)
-* [ ] think about [snowflake-inspector](http://snowflakeinspector.hashmapinc.com/) inclusion
+* [ ] think about [snowflake-inspector](http://snowflakeinspector.hashmapinc.com/) inclusion [github](https://github.com/hashmapinc/snowflake-inspector)
 * [x] add some JSON to the permissions test
 * [ ] add some automation to the testing

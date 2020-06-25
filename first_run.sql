@@ -50,7 +50,9 @@ COMMENT = "BI tools will connect to this warehouse to run analytical queries and
 ----------------------------------------
 -- (3) CREATE ROLES AND GRANT PRIVILEGES
 ----------------------------------------
-USE ROLE ACCOUNTADMIN;
+USE ROLE SECURITYADMIN;
+-- From the docs: We recommend using a role other than ACCOUNTADMIN for automated scripts
+-- https://docs.snowflake.com/en/user-guide/security-access-control-considerations.html
 
 CREATE ROLE "ROLE_INGEST"
 COMMENT = "Owns the tables in your raw database, and connects to the loading warehouse";
