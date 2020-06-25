@@ -47,10 +47,10 @@ The [first_run_drop.sql](/first_run_drop.sql) file will drop all objects created
 # Why
 
 * Taking inspiration from [Calogica.com](https://Calogica.com) and following the advice of [Fishtown Analytics](https://blog.fishtownanalytics.com/how-we-configure-snowflake-fc13f1eb36c4), this helps you configure your Snowflake instance with a nicely configured and scalable platform for a POC or even a scalable base.
-* Read my writing on the topic of Data Systems at [groupby1](groupby1.substack.com/)
+* Read my writing on the topic of Data Systems at [groupby1](https://groupby1.substack.com/)
 
 
 # TODO
-* [ ] - think about adding [Snowsql CLI](https://docs.snowflake.com/en/user-guide/snowsql-install-config.html)
-* [ ] - think about permissions management with [permifrost](https://gitlab.com/gitlab-data/permifrost)
-* [ ] - think about [snowflake-inspector](http://snowflakeinspector.hashmapinc.com/) inclusion
+* [ ] think about adding [Snowsql CLI](https://docs.snowflake.com/en/user-guide/snowsql-install-config.html)
+* [ ] think about permissions management with [permifrost](https://gitlab.com/gitlab-data/permifrost)
+* [ ] think about [snowflake-inspector](http://snowflakeinspector.hashmapinc.com/) inclusion
