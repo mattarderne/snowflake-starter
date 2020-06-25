@@ -11,7 +11,7 @@ A starter template for [Snowflake Cloud Database](www.snowflake.com)
 
 ## Requirements
 
-* A Snowflake instance (takes 5min to setup)
+* [Snowflake instance](https://trial.snowflake.com/) (takes 5min to setup, no credit card for 1 month)
 * [SnowSQL CLI](https://docs.snowflake.com/en/user-guide/snowsql.html) (optional)
 
 ## 1. Deploy
@@ -20,6 +20,7 @@ Copy [first_run.sql](/first_run.sql) into a worksheet as in the screenshot below
 
 ![snowflake.png](/assets/worksheet.png)
 
+### Infrastructure Details
 ```
 ├── DATABASES
 │   ├── RAW                     # This is the landing pad for everything extracted and loaded
@@ -60,7 +61,7 @@ The [first_run_drop.sql](/first_run_drop.sql) file will drop all objects created
 
 ## 5. SnowSQL-CLI
 
-If you want to do this more than once, the [SnowSQL CLI](https://docs.snowflake.com/en/user-guide/snowsql.html) is worth a look. 
+If you want to do this more than once, the [SnowSQL CLI](https://docs.snowflake.com/en/user-guide/snowsql.html) is great. 
 
 ```bash
 git clone https://github.com/mattarderne/snowflake-starter.git
@@ -69,20 +70,10 @@ snowsql -c <your_connection_name> -f first_run.sql
 ```
 
 ## 6. End to End Test
-If the following all run without error, then that is an end to end test... it should take about a minute. (change the `<placeholders>`)
+If the following script runs without error, then that is an end to end test... it should take about a minute. (change the `<placeholders>` in the [file](tests/run.sh))
 
-```sql
-snowsql -c <your_connection_name> -f first_run_drop.sql -o friendly=false -o quiet=true
-snowsql -c <your_connection_name> -f first_run.sql -o friendly=false -o quiet=true
-snowsql -c <your_connection_name> -o friendly=false -o quiet=true -q "                                    
-    USE ROLE ACCOUNTADMIN;
-    GRANT ROLE ROLE_INGEST TO USER <USERNAME>;
-    GRANT ROLE ROLE_TRANSFORM TO USER <USERNAME>;
-    GRANT ROLE ROLE_REPORT TO USER <USERNAME>;
-    "
-snowsql -c <your_connection_name> -f first_run_permissions_test.sql -o friendly=false -o quiet=true
-snowsql -c <your_connection_name> -f json_example.sql -o friendly=false -o quiet=true
-snowsql -c <your_connection_name> -f first_run_drop.sql -o friendly=false -o quiet=true
+```bash
+sh tests/run.sh
 ```
 
 # Other things
