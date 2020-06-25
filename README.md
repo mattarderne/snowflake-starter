@@ -93,6 +93,6 @@ If you'd like to keep track of the evolution of your Snowflake Data Warehouse, [
 # TODO
 * [x] think about adding [Snowsql CLI](https://docs.snowflake.com/en/user-guide/snowsql-install-config.html)
 * [ ] think about permissions management with [permifrost](https://gitlab.com/gitlab-data/permifrost)
-* [ ] think about [snowflake-inspector](http://snowflakeinspector.hashmapinc.com/) inclusion [github](https://github.com/hashmapinc/snowflake-inspector)
+* [x] think about [snowflake-inspector](http://snowflakeinspector.hashmapinc.com/) inclusion [github](https://github.com/hashmapinc/snowflake-inspector)
 * [x] add some JSON to the permissions test
-* [ ] add some automation to the testing
+* [ ] add some _more_ automation to the testing
