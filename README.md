@@ -50,3 +50,7 @@ The [first_run_drop.sql](/first_run_drop.sql) file will drop all objects created
 * Read my writing on the topic of Data Systems at [groupby1](groupby1.substack.com/)
 
 
+# TODO
+[ ] - think about adding [Snowsql CLI](https://docs.snowflake.com/en/user-guide/snowsql-install-config.html)
+[ ] - think about permissions management with [permifrost](https://gitlab.com/gitlab-data/permifrost)
+[ ] - think about [snowflake-inspector](http://snowflakeinspector.hashmapinc.com/) inclusion
