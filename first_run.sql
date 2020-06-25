@@ -4,12 +4,12 @@
 
 USE ROLE SYSADMIN;
 
-CREATE DATABASE "RAW";
+CREATE DATABASE "RAW" COMMENT = "This database contains your raw data,";
 -- This database contains your raw data. 
 -- This is the landing pad for everything extracted and loaded, as well as containing external stages for data living in S3. 
 -- Access to this database is strictly permissioned.
 
-CREATE DATABASE "ANALYTICS";
+CREATE DATABASE "ANALYTICS" COMMENT = "This database contains tables and views accessible to analysts and reporting";
 -- This database contains tables and views accessible to analysts and reporting. 
 -- Everything in analytics is created and owned by dataform/dbt.
 
@@ -21,6 +21,7 @@ WITH WAREHOUSE_SIZE = 'XSMALL'
 WAREHOUSE_TYPE = 'STANDARD'
 AUTO_SUSPEND = 60
 AUTO_RESUME = TRUE
+COMMENT = "Tools like Fivetran and Stitch will use this warehouse to perform their regular loads of new data"
 ;
 -- Tools like Fivetran and Stitch will use this warehouse to perform their regular loads of new data. 
 -- We separate this workload from the other workloads because, at scale, loading can put significant strain on your warehouse and we don’t want to cause slowness for your BI users.
@@ -31,6 +32,7 @@ WITH WAREHOUSE_SIZE = 'XSMALL'
 WAREHOUSE_TYPE = 'STANDARD'
 AUTO_SUSPEND = 60
 AUTO_RESUME = TRUE
+COMMENT = "This is the warehouse that dataform/dbt will use to perform all data transformations"
 ;
 -- This is the warehouse that dataform/dbt will use to perform all data transformations. 
 -- It will only be in use (and charging you credits) when regular jobs are being run.
@@ -40,6 +42,7 @@ WITH WAREHOUSE_SIZE = 'XSMALL'
 WAREHOUSE_TYPE = 'STANDARD'
 AUTO_SUSPEND = 60
 AUTO_RESUME = TRUE
+COMMENT = "BI tools will connect to this warehouse to run analytical queries and report the results to end users"
 ;
 -- BI tools will connect to this warehouse to run analytical queries and report the results to end users. 
 -- This warehouse will be spun up only when a user is actively running a query against it.
@@ -49,14 +52,17 @@ AUTO_RESUME = TRUE
 ----------------------------------------
 USE ROLE ACCOUNTADMIN;
 
-CREATE ROLE "ROLE_INGEST";
--- Owns the tables in your raw database, and connects to the loadingwarehouse.
+CREATE ROLE "ROLE_INGEST"
+COMMENT = "Owns the tables in your raw database, and connects to the loading warehouse";
+-- Owns the tables in your raw database, and connects to the loading warehouse.
 
-CREATE ROLE "ROLE_TRANSFORM";
+CREATE ROLE "ROLE_TRANSFORM"
+COMMENT = "Has query permissions on tables in raw database and owns tables in the analytics database";
 -- Has query permissions on tables in raw database and owns tables in the analytics database. 
 -- This is for dataform/dbt developers and scheduled jobs.
 
-CREATE ROLE "ROLE_REPORT";
+CREATE ROLE "ROLE_REPORT"
+COMMENT = "Has permissions on the analytics database only. This role is for data consumers, such as analysts and BI tools";
 -- Has permissions on the analytics database only. This role is for data consumers, such as analysts and BI tools. 
 -- These users will not have permissions to read data from the raw database
 

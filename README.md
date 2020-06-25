@@ -39,7 +39,7 @@ The [first_run_permissions_test.sql](/first_run_permissions_test.sql) file will:
 1. create a new table and view in `ANALYTICS` using the `ROLE_TRANSFORM` role
 1. query that view using the `ROLE_REPORT` role
 
-**NB replace <USERNAME> in the file with your login name** 
+**NB replace `<USERNAME>` in the file with your login name** 
 
 ## JSON
 
@@ -62,7 +62,7 @@ snowsql -c <your_connection_name> -f first_run.sql
 ```
 
 ## End to end CLI
-If the following all run without error, then that is an end to end test... it should take about a minute. (change the <placeholders>)
+If the following all run without error, then that is an end to end test... it should take about a minute. (change the `<placeholders>`)
 
 ```sql
 snowsql -c <your_connection_name> -f first_run_drop.sql -o friendly=false -o quiet=true
