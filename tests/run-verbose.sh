@@ -13,5 +13,5 @@ snowsql -c matttest -f first_run_permissions_test.sql -o friendly=false -o quiet
 echo 'first_run_permissions_test'
 snowsql -c matttest -f json_example.sql -o friendly=false -o quiet=true
 echo 'json_example'
-snowsql -c matttest -f first_run_drop.sql -o friendly=false -o quiet=true
-echo 'first_run_drop'
+# snowsql -c matttest -f first_run_drop.sql -o friendly=false -o quiet=true
+# echo 'first_run_drop'

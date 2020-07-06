@@ -114,7 +114,12 @@ If you'd like to keep track of the evolution of your Snowflake Data Warehouse, [
 
 ## TODO
 * [x] think about adding [Snowsql CLI](https://docs.snowflake.com/en/user-guide/snowsql-install-config.html)
-* [ ] think about permissions management with [permifrost](https://gitlab.com/gitlab-data/permifrost)
-* [x] think about [snowflake-inspector](http://snowflakeinspector.hashmapinc.com/) inclusion [github](https://github.com/hashmapinc/snowflake-inspector)
 * [x] add some JSON to the permissions test
+* [x] think about [snowflake-inspector](http://snowflakeinspector.hashmapinc.com/) inclusion [github](https://github.com/hashmapinc/snowflake-inspector)
+* [ ] think about permissions management with [permifrost](https://gitlab.com/gitlab-data/permifrost)
 * [ ] add some _more_ automation to the testing
+* [ ] think about adding some kind of Query credit [usage analysis](https://www.snowflake.com/blog/understanding-snowflake-utilization-warehouse-profiling/) and [troubleshooting](https://community.snowflake.com/s/article/Cloud-Services-Billing-Update-Understanding-and-Adjusting-Usage)
+* [ ] think about adding some over-permission analysis
+* [ ] add [IP whitelisting](https://docs.snowflake.com/en/sql-reference/sql/alter-network-policy.html) to script
+* [ ] add the Snowflake credits query pack [1](https://github.com/snowflakedb/SnowAlert/blob/master/packs/snowflake_query_pack.sql)
+[2](https://github.com/snowflakedb/SnowAlert/blob/master/packs/snowflake_cost_management.sql)
