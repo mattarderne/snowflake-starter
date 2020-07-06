@@ -100,6 +100,16 @@ sh tests/run.sh
 
 # Other things
 
+## SnowAlert
+
+[SnowAlert](https://github.com/snowflakedb/SnowAlert) is a project maintained by Snowflake that provides some useful system monitoring features. I like to use some of the queries they have created to monitor cost spikes.
+
+The [snowAlert.sql](/snowAlert.sql) creates the views and runs the queries necessary to get alerts. Running it daily in Dataform/dbt is a nice way to get custom alerts to unusual spikes 
+
+```bash
+snowsql -c <your_connection_name> -f snowAlert.sql -o friendly=false -o quiet=true
+```
+
 ## Snowflake Inspector
 
 If you'd like to keep track of the evolution of your Snowflake Data Warehouse, [snowflakeinspector](http://snowflakeinspector.hashmapinc.com/) is a great tool to do just that. Query your metadata and paste the results into their tool and you'll get a nice explorable visualisation as below:
@@ -115,11 +125,11 @@ If you'd like to keep track of the evolution of your Snowflake Data Warehouse, [
 ## TODO
 * [x] think about adding [Snowsql CLI](https://docs.snowflake.com/en/user-guide/snowsql-install-config.html)
 * [x] add some JSON to the permissions test
+* [x] add the Snowflake credits query pack [1](https://github.com/snowflakedb/SnowAlert/blob/master/packs/snowflake_query_pack.sql)[2](https://github.com/snowflakedb/SnowAlert/blob/master/packs/snowflake_cost_management.sql)
 * [x] think about [snowflake-inspector](http://snowflakeinspector.hashmapinc.com/) inclusion [github](https://github.com/hashmapinc/snowflake-inspector)
 * [ ] think about permissions management with [permifrost](https://gitlab.com/gitlab-data/permifrost)
 * [ ] add some _more_ automation to the testing
 * [ ] think about adding some kind of Query credit [usage analysis](https://www.snowflake.com/blog/understanding-snowflake-utilization-warehouse-profiling/) and [troubleshooting](https://community.snowflake.com/s/article/Cloud-Services-Billing-Update-Understanding-and-Adjusting-Usage)
 * [ ] think about adding some over-permission analysis
 * [ ] add [IP whitelisting](https://docs.snowflake.com/en/sql-reference/sql/alter-network-policy.html) to script
-* [ ] add the Snowflake credits query pack [1](https://github.com/snowflakedb/SnowAlert/blob/master/packs/snowflake_query_pack.sql)
-[2](https://github.com/snowflakedb/SnowAlert/blob/master/packs/snowflake_cost_management.sql)
+* [ ] create a script to run and specify account name etc 
