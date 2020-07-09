@@ -133,3 +133,4 @@ If you'd like to keep track of the evolution of your Snowflake Data Warehouse, [
 * [ ] think about adding some over-permission analysis
 * [ ] add [IP whitelisting](https://docs.snowflake.com/en/sql-reference/sql/alter-network-policy.html) to script
 * [ ] create a script to run and specify account name etc 
+* [ ] fine tune the warehouse specifications appropriately 
