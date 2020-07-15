@@ -134,3 +134,14 @@ If you'd like to keep track of the evolution of your Snowflake Data Warehouse, [
 * [ ] add [IP whitelisting](https://docs.snowflake.com/en/sql-reference/sql/alter-network-policy.html) to script
 * [ ] create a script to run and specify account name etc 
 * [ ] fine tune the warehouse specifications appropriately 
+* [ ] compare `TO ROLE role` and `TO role`
+* [ ] add some features to make sure this is compatible with [RA_datawarehouse](https://github.com/rittmananalytics/ra_data_warehouse)
+
+
+## TODO: Snowflake Inspector
+* Schema:
+    * explore "analytics" database for primary keys, analyse for similarity, unnamed primary keys, variables etc
+    * make suggestions
+* Costs
+    * Explore query history and build a recommendation for query optimisation 
+    * Visualise 
