@@ -1,4 +1,3 @@
-
 ------------------
 -- Replace <USERNAME> with your current user
 ------------------
@@ -10,7 +9,7 @@
 -- GRANT ROLE ROLE_REPORT TO USER <USERNAME>;
 
 ------------------
--- TEST UDFs
+-- Create UDFs
 ------------------
 
 USE ROLE SYSADMIN;
@@ -28,8 +27,6 @@ CREATE OR REPLACE FUNCTION ANALYTICS.UDF_TEST.AREA_OF_CIRCLE(RADIUS FLOAT)
   $$
   ;
 
-
-
 -- JavaScript UDF
 CREATE OR REPLACE FUNCTION ANALYTICS.UDF_TEST.RECURSION_TEST(STR VARCHAR)
   RETURNS VARCHAR
@@ -40,12 +37,15 @@ CREATE OR REPLACE FUNCTION ANALYTICS.UDF_TEST.RECURSION_TEST(STR VARCHAR)
   ;
 SELECT AREA_OF_CIRCLE(1.0); 
 SELECT RECURSION_TEST('ABC');
--- note these are not fully qualified functions
-
+-- note these are not fully qualified functions within the context of their creation.
 
 GRANT ALL PRIVILEGES ON FUNCTION AREA_OF_CIRCLE(float) TO ROLE_REPORT;
 GRANT ALL PRIVILEGES ON FUNCTION RECURSION_TEST(string) TO ROLE_REPORT;
 
+
+------------------
+-- Create UDFs
+------------------
 USE ROLE ROLE_REPORT; 
 USE WAREHOUSE WAREHOUSE_REPORT;
 USE DATABASE ANALYTICS;

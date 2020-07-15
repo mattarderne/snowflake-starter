@@ -8,4 +8,5 @@ snowsql -c <your_connection_name> -o friendly=false -o quiet=true -q "
     "
 snowsql -c <your_connection_name> -f test_permissions.sql -o friendly=false -o quiet=true
 snowsql -c <your_connection_name> -f test_json.sql -o friendly=false -o quiet=true
+snowsql -c <your_connection_name> -f test_udf.sql -o friendly=false -o quiet=true
 snowsql -c <your_connection_name> -f first_run_drop.sql -o friendly=false -o quiet=true

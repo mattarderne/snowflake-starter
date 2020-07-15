@@ -60,7 +60,6 @@ Or use the CLI:
 snowsql -c <your_connection_name> -f test_permissions.sql
 ```
 
-
 ## 3. JSON
 
 JSON is very well handled in Snowflake, and worth a look. The [test_json.sql](/test_json.sql) file runs through the flattening of raw JSON into a table.
@@ -72,7 +71,17 @@ snowsql -c <your_connection_name> -f test_json.sql
 
 * Key to note is the `RECURSIVE=>TRUE` flag
 
-## 4. Tear Down
+## 4. User-Defined Functions
+
+UDF allow you to create functions in SQL or JavaScript. The [test_udf.sql](/test_udf.sql) file runs through the creation and testing of a SQL and JavaScript UDF. See the [docs](https://docs.snowflake.com/en/sql-reference/udf-overview.html) for more
+
+Or use the CLI:
+```bash
+snowsql -c <your_connection_name> -f test_udf.sql
+```
+
+
+## 5. Tear Down
 
 The [first_run_drop.sql](/first_run_drop.sql) file will drop all objects created by [first_run.sql](/first_run.sql) 
 
@@ -81,7 +90,7 @@ Or use the CLI:
 snowsql -c <your_connection_name> -f first_run_drop.sql
 ```
 
-## 5. SnowSQL-CLI
+## 6. SnowSQL-CLI
 
 If you want to do this more than once, the [SnowSQL CLI](https://docs.snowflake.com/en/user-guide/snowsql.html) is great. 
 
@@ -91,7 +100,7 @@ cd snowflake-starter
 snowsql -c <your_connection_name> -f first_run.sql
 ```
 
-## 6. End to End Test
+## 7. End to End Test
 If the following script runs without error, then that is an end to end test... it should take about a minute. (change the `<placeholders>` in the [file](tests/run.sh))
 
 ```bash
