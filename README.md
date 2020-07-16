@@ -127,6 +127,7 @@ If you'd like to keep track of the evolution of your Snowflake Data Warehouse, [
 
 ## Thanks
 
+* Thanks to [Trevor](https://trevorscode.com/comprehensive-tutorial-of-snowflake-privileges-and-access-control/) for reviews, thoughts and guidance, checkout his code [here](https://github.com/trevor-higbee/snowflake-tools)
 * Thanks for the inspiration [Calogica.com](https://Calogica.com) and [Fishtown Analytics](https://blog.fishtownanalytics.com/how-we-configure-snowflake-fc13f1eb36c4). JSON tutorial [here](https://interworks.com/blog/hcalder/2018/06/19/the-ease-of-working-with-json-in-snowflake/)
 * Read my writing on the topic of Data Systems at [groupby1](https://groupby1.substack.com/)
 

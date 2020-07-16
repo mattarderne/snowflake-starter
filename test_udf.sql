@@ -35,12 +35,12 @@ CREATE OR REPLACE FUNCTION ANALYTICS.UDF_TEST.RECURSION_TEST(STR VARCHAR)
   return (STR.length <= 1 ? STR : STR.substring(0,1) + '_' + RECURSION_TEST(STR.substring(1)));
   $$
   ;
+-- note these are not fully qualified functions within the context of their creation.
 SELECT AREA_OF_CIRCLE(1.0); 
 SELECT RECURSION_TEST('ABC');
--- note these are not fully qualified functions within the context of their creation.
 
-GRANT ALL PRIVILEGES ON FUNCTION AREA_OF_CIRCLE(float) TO ROLE_REPORT;
-GRANT ALL PRIVILEGES ON FUNCTION RECURSION_TEST(string) TO ROLE_REPORT;
+-- GRANT ALL PRIVILEGES ON FUNCTION AREA_OF_CIRCLE(float) TO ROLE_REPORT;
+-- GRANT ALL PRIVILEGES ON FUNCTION RECURSION_TEST(string) TO ROLE_REPORT;
 
 
 ------------------
@@ -50,6 +50,6 @@ USE ROLE ROLE_REPORT;
 USE WAREHOUSE WAREHOUSE_REPORT;
 USE DATABASE ANALYTICS;
 
+-- note these ARE fully qualified functions
 SELECT ANALYTICS.UDF_TEST.AREA_OF_CIRCLE(1.0);
 SELECT ANALYTICS.UDF_TEST.RECURSION_TEST('ABC');
--- note these ARE fully qualified functions

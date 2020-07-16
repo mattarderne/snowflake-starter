@@ -10,7 +10,7 @@ snowsql -c matttest -o friendly=false -o quiet=true -q "
     "
 echo 'grant'
 snowsql -c matttest -f test_permissions.sql -o friendly=false -o quiet=true
-echo 'first_run_permissions_test'
+echo 'test_permissions'
 snowsql -c matttest -f test_json.sql -o friendly=false -o quiet=true
 echo 'json_example'
 snowsql -c matttest -f test_udf.sql -o friendly=false -o quiet=true

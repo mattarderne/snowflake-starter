@@ -25,9 +25,7 @@ GRANT USAGE ON DATABASE "RAW" TO ROLE "ROLE_INGEST";
 
 * [x] Is there a reason you quote all your object names to be uppercase? I usually don't use quotes since uppercased and quoted is the same as any casing unquoted, but I'm interested if there's a reason you do.
 
-I like your alerts. I'm going to use those!
-
-This is super subjective, but I prefer to put the database name in the role name in case I add databases. 
+* [ ] This is super subjective, but I prefer to put the database name in the role name in case I add databases. 
 
 For example, we have one database for Fivetran, one for Stitch, and one for anything we load via Snowpipe or the CLI. 
 I don't know that that's the right way but for each database we just have two roles - owner, and reader. This is explained a bit more here: https://trevorscode.com/toward-a-standard-model-for-snowflake-roles-and-privileges/. 
