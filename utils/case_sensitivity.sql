@@ -2,6 +2,8 @@
 -------Comparison between Snowflake and PostgreSQL-------------------
 --------------------Case Sensitivity --------------------------------
 ---------------------------------------------------------------------
+-- See Snowflake docs for more
+-- https://docs.snowflake.com/en/sql-reference/identifiers-syntax.html
 
 DROP TABLE IF EXISTS "UPPER_CASE";
 CREATE TABLE IF NOT EXISTS "UPPER_CASE"(
