@@ -1,0 +1,56 @@
+------------------
+-- Replace <USERNAME> with your current user
+------------------
+
+-- USE ROLE ACCOUNTADMIN;
+
+-- GRANT ROLE ROLE_INGEST TO USER <USERNAME>;
+-- GRANT ROLE ROLE_TRANSFORM TO USER <USERNAME>;
+-- GRANT ROLE ROLE_REPORT TO USER <USERNAME>;
+
+------------------
+-- Create UDFs
+------------------
+
+USE ROLE SYSADMIN;
+USE WAREHOUSE WAREHOUSE_REPORT;
+USE DATABASE ANALYTICS;
+CREATE OR REPLACE SCHEMA ANALYTICS.UDF_TEST;
+
+
+-- SQL UDF
+CREATE OR REPLACE FUNCTION ANALYTICS.UDF_TEST.AREA_OF_CIRCLE(RADIUS FLOAT)
+  RETURNS FLOAT
+  AS
+  $$
+    pi() * radius * radius
+  $$
+  ;
+
+-- JavaScript UDF
+CREATE OR REPLACE FUNCTION ANALYTICS.UDF_TEST.RECURSION_TEST(STR VARCHAR)
+  RETURNS VARCHAR
+  LANGUAGE JAVASCRIPT
+  AS $$
+  return (STR.length <= 1 ? STR : STR.substring(0,1) + '_' + RECURSION_TEST(STR.substring(1)));
+  $$
+  ;
+-- note these are not fully qualified functions within the context of their creation.
+SELECT AREA_OF_CIRCLE(1.0); 
+SELECT RECURSION_TEST('ABC');
+
+-- not necessary due to the GRANT USAGE ON FUTURE FUNCTIONS in the initial script
+-- GRANT ALL PRIVILEGES ON FUNCTION AREA_OF_CIRCLE(float) TO ROLE_REPORT;
+-- GRANT ALL PRIVILEGES ON FUNCTION RECURSION_TEST(string) TO ROLE_REPORT;
+
+
+------------------
+-- Create UDFs
+------------------
+USE ROLE ROLE_REPORT; 
+USE WAREHOUSE WAREHOUSE_REPORT;
+USE DATABASE ANALYTICS;
+
+-- note these ARE fully qualified functions
+SELECT ANALYTICS.UDF_TEST.AREA_OF_CIRCLE(1.0);
+SELECT ANALYTICS.UDF_TEST.RECURSION_TEST('ABC');

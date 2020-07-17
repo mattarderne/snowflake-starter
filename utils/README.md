@@ -2,7 +2,8 @@
 
 ## case_sensitivity.sql
 
-Snowflake has some differences to PostgreSQL, demonstrated below. The case_sensitivity.sql file runs in both Snowflake and PostgreSQL, but the Behavior is different as below.
+Snowflake has some differences to PostgreSQL, demonstrated below. The case_sensitivity.sql file runs in both Snowflake and PostgreSQL, but the behavior is different as below:
+
 
 ```
 --  Upper case table

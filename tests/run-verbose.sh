@@ -9,9 +9,11 @@ snowsql -c matttest -o friendly=false -o quiet=true -q "
     GRANT ROLE ROLE_REPORT TO USER mattarderne;
     "
 echo 'grant'
-snowsql -c matttest -f first_run_permissions_test.sql -o friendly=false -o quiet=true
-echo 'first_run_permissions_test'
-snowsql -c matttest -f json_example.sql -o friendly=false -o quiet=true
+snowsql -c matttest -f test_permissions.sql -o friendly=false -o quiet=true
+echo 'test_permissions'
+snowsql -c matttest -f test_json.sql -o friendly=false -o quiet=true
 echo 'json_example'
+snowsql -c matttest -f test_udf.sql -o friendly=false -o quiet=true
+echo 'udf_example'
 # snowsql -c matttest -f first_run_drop.sql -o friendly=false -o quiet=true
 # echo 'first_run_drop'
