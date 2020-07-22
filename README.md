@@ -137,8 +137,9 @@ If you'd like to keep track of the evolution of your Snowflake Data Warehouse, [
 * [x] add some JSON to the permissions test
 * [x] add the Snowflake credits query pack [1](https://github.com/snowflakedb/SnowAlert/blob/master/packs/snowflake_query_pack.sql)[2](https://github.com/snowflakedb/SnowAlert/blob/master/packs/snowflake_cost_management.sql)
 * [x] think about [snowflake-inspector](http://snowflakeinspector.hashmapinc.com/) inclusion [github](https://github.com/hashmapinc/snowflake-inspector)
-* [ ] think about permissions management with [permifrost](https://gitlab.com/gitlab-data/permifrost)
+* [x] add a UDF
 * [x] compare `TO ROLE role` and `TO role`
+* [ ] think about permissions management with [permifrost](https://gitlab.com/gitlab-data/permifrost)
 * [ ] add some _more_ automation to the testing
 * [ ] think about adding some kind of Query credit [usage analysis](https://www.snowflake.com/blog/understanding-snowflake-utilization-warehouse-profiling/) and [troubleshooting](https://community.snowflake.com/s/article/Cloud-Services-Billing-Update-Understanding-and-Adjusting-Usage)
 * [ ] think about adding some over-permission analysis
@@ -146,7 +147,8 @@ If you'd like to keep track of the evolution of your Snowflake Data Warehouse, [
 * [ ] create a script to run and specify account name etc 
 * [ ] fine tune the warehouse specifications appropriately 
 * [ ] add some features to make sure this is compatible with [RA_datawarehouse](https://github.com/rittmananalytics/ra_data_warehouse)
-* [ ] add a UDF
+* [ ] update the sql to match the [mm style guide](https://github.com/mattm/sql-style-guide)
+* [ ] Add some data with the [docker dataset](https://github.com/aa8y/docker-dataset)
 
 ## TODO: Snowflake Inspector
 * Schema:
