@@ -139,9 +139,12 @@ If you'd like to keep track of the evolution of your Snowflake Data Warehouse, [
 * [x] think about [snowflake-inspector](http://snowflakeinspector.hashmapinc.com/) inclusion [github](https://github.com/hashmapinc/snowflake-inspector)
 * [x] add a UDF
 * [x] compare `TO ROLE role` and `TO role`
+* [ ] update `first_run.sql` to use Variables like [these](https://fivetran.com/docs/destinations/snowflake)
 * [ ] Add something about [masking semi-structured data with snowflake](https://www.snowflake.com/blog/masking-semi-structured-data-with-snowflake/)
 * [ ] think about permissions management with [permifrost](https://gitlab.com/gitlab-data/permifrost)
 * [ ] add some _more_ automation to the testing
+* [ ] add an option to pipe some data into snowflake
+* [ ] add a quick deploy BI tool with dbt? [example](https://medium.com/hashmapinc/amplifying-outcomes-with-snowflake-b5def9ca61c5)
 * [ ] think about adding some kind of Query credit [usage analysis](https://www.snowflake.com/blog/understanding-snowflake-utilization-warehouse-profiling/) and [troubleshooting](https://community.snowflake.com/s/article/Cloud-Services-Billing-Update-Understanding-and-Adjusting-Usage)
 * [ ] think about adding some over-permission analysis
 * [ ] add [IP whitelisting](https://docs.snowflake.com/en/sql-reference/sql/alter-network-policy.html) to script
