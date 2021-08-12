@@ -1,8 +1,8 @@
 # snowflake-starter
-A starter template for [Snowflake Cloud Database](www.snowflake.com)
+A starter template for [Snowflake Cloud Database](https://snowflake.com)
 
 * Snowflake offers a 1 month free trial, and with this repo you should be able to get a sense for the basics of Snowflake within an hour.
-* This temaplate will create the necessary `ROLE`, `USER`, `DATABASE`, `SCHEMA` & `WAREHOUSE`(s) necessary to get up and running with Snowflake:
+* This template will create the necessary `ROLE`, `USER`, `DATABASE`, `SCHEMA` & `WAREHOUSE`(s) necessary to get up and running with Snowflake:
 
 ![snowflake.png](/assets/snowflake_rn.png)
 
@@ -140,6 +140,7 @@ If you'd like to keep track of the evolution of your Snowflake Data Warehouse, [
 * [x] add a UDF
 * [x] compare `TO ROLE role` and `TO role`
 * [ ] update `first_run.sql` to use Variables like [these](https://fivetran.com/docs/destinations/snowflake)
+* [ ] Add something about [masking semi-structured data with snowflake](https://www.snowflake.com/blog/masking-semi-structured-data-with-snowflake/)
 * [ ] think about permissions management with [permifrost](https://gitlab.com/gitlab-data/permifrost)
 * [ ] add some _more_ automation to the testing
 * [ ] add an option to pipe some data into snowflake
