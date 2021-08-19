@@ -1,8 +1,12 @@
 # Costs
 
 ## Costs
-Think about snowalert and how it can help
-https://medium.com/hashmapinc/snowalert-data-driven-security-analytics-using-snowflake-data-warehouse-3f046b779d54
+Think about snowalert and how it can help:
+eg:
+
+1. https://medium.com/hashmapinc/snowalert-data-driven-security-analytics-using-snowflake-data-warehouse-3f046b779d54
+2. https://medium.com/opendoor-labs/analyze-snowflake-costs-570b7be953db
+3. https://about.gitlab.com/blog/2019/08/26/managing-your-snowflake-spend-with-periscope-and-dbt/
 
 ## Utility
 Find a way to map costs to utilisation of tables and views
