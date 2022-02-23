@@ -6,6 +6,8 @@ A starter template for [Snowflake Cloud Database](https://snowflake.com)
 
 ![snowflake.png](/assets/snowflake_rn.png)
 
+Strongly recommend taking a looking at managing [Snowflake with Terraform](https://github.com/immuta/terraform-snowflake-fast-data-warehouse) once you're familiar with the basics.
+
 
 # Usage
 
